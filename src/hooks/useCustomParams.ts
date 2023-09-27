@@ -1,6 +1,7 @@
 import { api } from "@/api"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react"
+import { toast } from "react-toastify"
 
 type Params = { 
     serialNumber:string,
@@ -9,8 +10,8 @@ type Params = {
 
 type Props = {
     params: Params
-    installAppFromGooglePlay():void
-    installAppFromAppStore():void
+    installAppFromGooglePlay():string
+    installAppFromAppStore():string
 }
 
 export const useCustomParams = ():Props => {
@@ -22,16 +23,18 @@ export const useCustomParams = ():Props => {
 
     const searchParams = useSearchParams()
 
-    const installAppFromAppStore =  () => {1
-        try {
-            api.openOnAppStore(params.id, params.serialNumber)
-        } catch (error) {
-            console.log(error)
+    const installAppFromAppStore =  ():string => {
+        if (params.id && params.serialNumber) {
+            return `elpvocovo://Home?id=${params.id}&SerialNumber=${params.serialNumber}`
         }
+        return `elpvocovo://Home`
     }
 
-    const installAppFromGooglePlay =  () => {
-        
+    const installAppFromGooglePlay =  ():string => {
+        if (params.id && params.serialNumber) {
+            return `elpvocovo://Home?id=${params.id}&SerialNumber=${params.serialNumber}`
+        }
+        return `elpvocovo://Home`
     }
 
     useEffect(() => {

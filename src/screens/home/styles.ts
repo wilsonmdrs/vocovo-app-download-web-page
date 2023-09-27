@@ -57,6 +57,11 @@ export const Title = styled.h3`
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
+    text-align: center;
+
+    @media only screen and (max-width:480px) {
+        font-size: 1.5;
+    }
 `
 
 export const Icon = styled(Image)<ImageProps>`
@@ -107,3 +112,4 @@ export const ButtonSubLabel = styled.p`
     height: 100%;
     font-weight: 300;
 `
+export const Link = styled.a``

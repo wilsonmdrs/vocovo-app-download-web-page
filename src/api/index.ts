@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const openOnAppStore = (id:string, serialNumber:string) => {
-    axios.get('elpvocovo://')
+    axios.get(`https://elpvocovo/`)
 }
 
 export const api = {
