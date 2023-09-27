@@ -27,6 +27,9 @@ export const StoreContainer = styled.div`
     align-items: center;
     gap: 50px;
     z-index: 2;
+    @media only screen and (max-width:480px) {
+        flex-direction: column;
+    }
 `
 
 export const BackgroundImage = styled(Image)<ImageProps>`
