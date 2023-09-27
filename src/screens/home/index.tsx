@@ -19,13 +19,16 @@ const Home = () => {
                 <Title>Download Our Application!</Title>
             </LogoContainer>
             <StoreContainer>
-            <Button onClick={installAppFromAppStore}>
+                <a href="elpvocovo://">
+
+            <Button>
                 <Icon src={AppleIcon} alt="apple icon" />
                 <ButtonLabelContainer>
                     <ButtonSubLabel>GET IT ON </ButtonSubLabel>
                     <ButtonLabel>App Store </ButtonLabel>
                 </ButtonLabelContainer>
             </Button>
+                </a>
             <Button onClick={installAppFromGooglePlay}>
                 <Icon src={PlayStoreIcon} alt="play store icon"  />
                 <ButtonLabelContainer>
