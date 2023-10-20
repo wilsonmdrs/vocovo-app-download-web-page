@@ -32,6 +32,7 @@ const Home = () => {
 
   return (
     <Container>
+      <BackgroundImage src={Background} alt="background image" loading="lazy" />
       <LogoContainer>
         <Image src={VocovoIcon} alt="vocovo icon" width={200} />
         <Title>Download Our Application!</Title>
